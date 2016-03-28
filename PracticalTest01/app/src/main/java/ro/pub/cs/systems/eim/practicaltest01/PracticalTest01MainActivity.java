@@ -57,25 +57,6 @@ public class PracticalTest01MainActivity extends AppCompatActivity {
                 }
             }
 
-//        Integer sum = Integer.parseInt(leftEditText.getText().toString()) + Integer.parseInt(rightEditText.getText().toString());
-//        if (sum > Constants.limit && !serviceStarted) {
-//            pornire serviciu
-//            Intent intent = new Intent(getApplicationContext(), PracticalTest01Service.class);
-//            intent.putExtra(Constants.NR_1, leftEditText.getText().toString());
-//            intent.putExtra(Constants.NR_2, rightEditText.getText().toString());
-//            getApplicationContext().startService(intent);
-//            serviceStarted = true;
-//        }
-        }
-    }
-
-    @Override
-//    apelata la distrugerea activitatii
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        switch (requestCode) {
-            case 1: { // cod dar la pornirea activitatii
-//                Toast.makeText(this, "The activity returned with result " + resultCode, Toast.LENGTH_LONG).show();
-            }
         }
     }
 
@@ -83,7 +64,6 @@ public class PracticalTest01MainActivity extends AppCompatActivity {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 // salvarea starii
-//        outState.putString(Constants.TEXT_FIELD_LEFT, leftEditText.getText().toString());
         outState.putString(Constants.NR1, editText1.getText().toString());
         outState.putString(Constants.NR2, editText2.getText().toString());
         outState.putString(Constants.NR3, editText3.getText().toString());

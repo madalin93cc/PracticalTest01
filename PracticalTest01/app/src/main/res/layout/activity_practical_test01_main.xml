@@ -23,6 +23,7 @@
                 android:ems="10"
                 android:id="@+id/editText1"
                 android:layout_column="0"
+                android:saveEnabled="false"
                 android:width="150dp" />
 
             <EditText
@@ -32,6 +33,7 @@
                 android:ems="10"
                 android:id="@+id/editText2"
                 android:layout_column="1"
+                android:saveEnabled="false"
                 android:width="150dp" />
         </TableRow>
         <TableRow>
@@ -42,6 +44,7 @@
                 android:ems="10"
                 android:id="@+id/editText3"
                 android:layout_column="0"
+                android:saveEnabled="false"
                 android:width="150dp" />
 
             <EditText
@@ -50,6 +53,7 @@
                 android:inputType="number"
                 android:ems="10"
                 android:id="@+id/editText4"
+                android:saveEnabled="false"
                 android:layout_column="1"
                 android:width="150dp" />
         </TableRow>
