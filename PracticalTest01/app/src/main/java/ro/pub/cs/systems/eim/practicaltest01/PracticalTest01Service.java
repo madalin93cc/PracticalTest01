@@ -19,9 +19,8 @@ public class PracticalTest01Service extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         if (intent != null) {
 //            variabile de pe intentie
-//            nr1 = Integer.parseInt(intent.getExtras().getString(Constants.NR_1));
         }
-        processingThread = new ProcessingThread(this/*variabile de pe intentie*/);
+        processingThread = new ProcessingThread(this);
         processingThread.start();
         return Service.START_REDELIVER_INTENT;
     }

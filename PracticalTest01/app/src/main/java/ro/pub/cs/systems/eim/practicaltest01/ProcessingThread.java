@@ -4,14 +4,17 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
+import java.util.Random;
+
 /**
  * Created by colez on 27/03/2016.
  */
 public class ProcessingThread extends Thread{
     private Context context;
     private boolean isRunning = true;
+    private Random random = new Random();
 
-    public ProcessingThread(Context context/* alte variabile*/) {
+    public ProcessingThread(Context context) {
         this.context = context;
     }
 
@@ -20,7 +23,7 @@ public class ProcessingThread extends Thread{
         Log.d("[ProcessingThread]", "Thread has started!");
         while (isRunning) {
 //            actiune
-//            sendMessage();
+            sendMessage();
             sleep();
         }
         Log.d("[ProcessingThread]", "Thread has stopped!");
@@ -29,9 +32,11 @@ public class ProcessingThread extends Thread{
     private void sendMessage() {
 //        send broadcast message
         Intent intent = new Intent();
-//        actiunea, trebuie sa fie aceleasi la care asculta actiunea principala
-//        intent.setAction(Constants.actionTypes[random.nextInt(Constants.actionTypes.length)]);
-//        intent.putExtra("message", new Date(System.currentTimeMillis()) + " " + aritm + geom);
+        intent.setAction(Constants.ACTION);
+        intent.putExtra("nr1", random.nextInt());
+        intent.putExtra("nr2", random.nextInt());
+        intent.putExtra("nr3", random.nextInt());
+        intent.putExtra("nr4", random.nextInt());
         context.sendBroadcast(intent);
     }
 
